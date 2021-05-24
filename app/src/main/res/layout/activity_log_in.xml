@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LogIn">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="260dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false">
+
+        <Space
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edittextmail"
+                android:layout_width="wrap_content"
+                android:hint="mail"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                tools:layout_editor_absoluteX="97dp"
+                tools:layout_editor_absoluteY="228dp" />
+
+            <EditText
+                android:id="@+id/edittextpassw"
+                android:layout_width="wrap_content"
+                android:hint="password"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textPassword"
+                tools:layout_editor_absoluteX="97dp"
+                tools:layout_editor_absoluteY="278dp" />
+
+
+
+            <Button
+                android:id="@+id/buton999"
+                android:layout_width="214dp"
+                android:layout_height="wrap_content"
+                android:onClick="LogIn"
+                android:text="log in" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
