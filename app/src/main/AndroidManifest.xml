@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BetaLetsGoo">
-        <activity android:name=".Credits"></activity>
+        <activity android:name=".test"></activity>
+        <activity android:name=".Credits" />
         <activity android:name=".LogIn" />
         <activity android:name=".SignIn" />
         <activity android:name=".MentalHelpActivity" />

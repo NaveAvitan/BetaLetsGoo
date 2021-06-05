@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     private Location lastKnownLocation;
     String tvLat, tvLong;
 
-
+     boolean hasclicked= false;
   
 
 
@@ -152,11 +152,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startsiren(View view) {
+        hasclicked= true;
         music= MediaPlayer.create(this,R.raw.sirensounf2);
         music.start();
+        //hasclicked=false;
     }
 
     public void fakecall(View view) {
+        hasclicked=true;
         music= MediaPlayer.create(this,R.raw.sirensound);
         music.start();
         Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
@@ -165,9 +168,11 @@ public class MainActivity extends AppCompatActivity {
         } else {
             vibrator.vibrate(5000);
         }
+        //hasclicked=false;
     }
 
     public void soms(View view) {
+        hasclicked= true;
         String phonenumber= num2;
         String textmassage = "i need u here its sos" + "http://maps.google.com/?q=<"+tvLat+">,<"+tvLong+">" ;
 
@@ -193,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void needMH(View view) {
+
         Intent si = new Intent(this, MentalHelpActivity.class);
         startActivity(si);
     }
@@ -219,4 +225,12 @@ public class MainActivity extends AppCompatActivity {
              startActivity(si);
         }
         return  true;
-    } }
+    }
+
+    public void gototest(View view) {
+       hasclicked=true;
+        Intent si = new Intent(this,Test.class);
+        startActivity(si);
+
+    }
+}
